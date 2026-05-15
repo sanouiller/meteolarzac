@@ -4,7 +4,10 @@ on:
   schedule:
     - cron: "*/15 * * * *"   # toutes les 15 minutes
   workflow_dispatch:          # bouton manuel dans l'onglet Actions
-
+  
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+  
 jobs:
   fetch:
     name: Récupérer les données Weatherlink
