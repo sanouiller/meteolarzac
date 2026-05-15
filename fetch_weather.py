@@ -18,9 +18,9 @@ import time
 import urllib.error
 import urllib.request
 
-API_KEY    = os.environ.get("WEATHERLINK_API_KEY", "")
-API_SECRET = os.environ.get("WEATHERLINK_API_SECRET", "")
-STATION_ID = os.environ.get("WEATHERLINK_STATION_ID", "")
+API_KEY    = os.environ.get("WEATHERLINK_API_KEY", "").strip()
+API_SECRET = os.environ.get("WEATHERLINK_API_SECRET", "").strip()
+STATION_ID = os.environ.get("WEATHERLINK_STATION_ID", "").strip()
 
 if not all([API_KEY, API_SECRET, STATION_ID]):
     print("❌  Variables manquantes : WEATHERLINK_API_KEY / API_SECRET / STATION_ID")
